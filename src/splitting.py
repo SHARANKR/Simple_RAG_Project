@@ -3,6 +3,3 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
 chunks = splitter.create_documents([transcript])
 
-len(chunks)
-
-chunks[100]
