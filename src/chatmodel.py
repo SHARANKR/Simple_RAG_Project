@@ -1,6 +1,10 @@
-from langchain_openai import OpenAIEmbeddings, ChatOpenAI
+# from langchain_openai import OpenAIEmbeddings, ChatOpenAI
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import PromptTemplate
-llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.2)
+from src.retrieval import retriever
+# llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.2)
+
+llm = ChatGoogleGenerativeAI(model='gemini-3-flash-preview')
 
 prompt = PromptTemplate(
     template="""
